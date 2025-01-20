@@ -2,7 +2,7 @@
 
 namespace App\Notifications;
 
-use App\Models\Chirp;
+use App\Models\Chirp; //Nous ajoutons la bdd chirp
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Str;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -16,7 +16,7 @@ class NewChirp extends Notification
     /**
      * Create a new notification instance.
      */
-    public function __construct(public Chirp $chirp)
+    public function __construct(public Chirp $chirp) //Pour que la classe NewChirp puisse récupérer notre chirp
     {
 
     }
